@@ -51,7 +51,7 @@ number of datapoints in the figure below:
 
 <br><br>
 <p align="left">
-  <img src="Figures/pie_chart.png" width="600">
+  <img src="Figures/pie_chart.png" width="500">
 </p>
 <br><br>
 
@@ -88,8 +88,41 @@ projected on to the previously computed principal axes (PC1 and PC2).
 The results predicted using the one-class SVM technique are shown in panel A whereas 
 those predicted using the Isolation Forest technique are shown in panel B. 
 
+<br><br>
+<p align="left">
+  <img src="Figures/OCSVM_IsoForest.png" height="700">
+</p>
+<br><br>
 
 In both cases, the model outputs are presented in a descending order of anomaly percentage. 
 The red arrows added to the Isolation Forest output point to outermost points where the datapoints 
-contrast the anomaly predictions made by one-class SVM.  
-<\div>
+contrast the anomaly predictions made by one-class SVM. 
+
+## **Summary & Conclusions** 
+
+The IQR approach indicated only when two features were simultaneously flagged as 
+outliers that the expected outlier threshold was satisfied and an anomalous status could 
+be assumed for the ship’s engine. Despite producing realistic results, the IQR approach 
+is a tedious process that can prove problematic for high-dimensional data. 
+
+Both the one-class SVM and the Isolation Forest methods proved highly effective in 
+dealing with a multi-dimensional dataset. The 2D plots show the density of anomalous 
+datapoints decreases while their resolution increases as each model is tuned towards 
+a lower anomaly percentage. 
+
+The two components, PC1 and PC2, account for roughly 37% of the variance of a 
+multivariate dataset and perform poorly in segmenting/clustering the anomalous and normal datapoints. 
+However, even when the anomaly percentage is reduced to the 1% range, the densest portion 
+of the anomalous datapoints remains centralised which could be indicative of a 
+pattern in real space.  
+
+When comparing the two ML models, the PCA plots differ slightly. Most notably, a 
+datapoint situated furthest along  PC1 is persistently classified as an anomaly by one-
+class SVM while being simultaneously classified as normal by Isolation Forest. At the 1% 
+anomaly rate, the differences in classification become more frequent and apparent, 
+especially across the upper-left segment. Given the points marked by the red arrows
+are located at the extremes of the principal axes, the one-class SVM approach 
+can be said to produce more accurate anomaly predictions, albeit at a computational 
+cost. 
+
+</div>
