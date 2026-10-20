@@ -69,6 +69,18 @@ enclosed within the decision boundary. The model was run using a radial kernel f
 and with various combinations of the tuning parameters gamma and nu. The key results 
 are highlighted in the table below:
 
+
+| Nu Value | Gamma Value | Anomaly Percentage / % |
+|----------|-------------|------------------------|
+| 0.07 | 0.5 | 7.19 |
+| 0.05 | 0.5 | 5.34 |
+| 0.03 | 0.5 | 3.77 |
+| 0.03 | 0.3 | 3.02 |
+| 0.03 | 0.2 | 3.02 |
+| 0.01 | 0.2 | 1.03 |
+| 0.01 | 0.1 | 0.97 |
+
+
 While a lower gamma implies a broader decision boundary, a lower nu decreases the 
 likelihood of including more points within the boundary which collectively reduces the 
 sensitivity to outliers. The post model-tuning, PCA visualisations are presented in 
