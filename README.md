@@ -21,9 +21,13 @@ results obtained from the two ML techniques are visualised using a dimensionalit
 reduction technique called the Principal Component Analysis (PCA).
 
 ## **EDA- Outliers Visualised per Feature**
+The colour-coded  box plots produced  for each feature considered critical for engine 
+performance:
+![boxplots_eda]()
 ## **IQR Results**
 The principle behind the IQR approach is depicted in the figure below where upper and lower 
 bounds are derived per feature and used to flag outliers in a row-wise fashion.
+![IQR_approach](IQR_method.png)
 
 
 The sole presence of an outlier for a given feature does not indicate an anomaly in the 
